@@ -3,8 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.keys import Keys
-from personal import Personal
+from taipingshan.personal import Personal
 import time
 
 target_date = '2022-03-25'
@@ -17,7 +16,7 @@ personal = Personal('Kevin', '0912345678', 'F129123456', '1995-07-30', 'kevin123
 personal.to_string()
 
 
-def launch_browser():
+def start_booking_room():
     s = Service(ChromeDriverManager().install())
     browser = webdriver.Chrome(service=s)
     browser.get(target_url)
@@ -84,4 +83,4 @@ def launch_browser():
 
 
 if __name__ == '__main__':
-    launch_browser()
+    start_booking_room()

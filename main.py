@@ -1,4 +1,4 @@
-from taipingshan_room.taipingshan_room_helper import launch_browser
+from taipingshan.taipingshan_room_helper import start_booking_room
 
 if __name__ == '__main__':
-    launch_browser()
+    start_booking_room()

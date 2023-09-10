@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import Select
 import time
-from personal import Personal
+from taipingshan.personal import Personal
 
 personal = Personal('方楷文', '0912345678', 'F129123456', '1995-07-30', 'kevin1061517@gmail.com')
 personal.to_string()
