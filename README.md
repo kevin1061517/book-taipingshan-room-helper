@@ -1,5 +1,17 @@
 ## book-taipingshan-room-helper
 
+### Remove the mistakenly uploaded idea dictionary from the GitHub repository
+```
+// 1. List the files in the cache 
+git ls-files
+
+// 2. Remove the file that is not required
+git rm -r --cached .idea
+git commit -m "remove idea dictionary"
+
+// 3. Manually delete the idea dictionary on Github 
+```
+
 ### Requirement
 1. pip3 install selenium
 2. pip3 install webdriver-manager

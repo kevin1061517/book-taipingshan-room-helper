@@ -1,6 +1,7 @@
 log
 # IntelliJ project files
-.idea
+/.idea/
+/target/
 *.iml
 out
 gen
