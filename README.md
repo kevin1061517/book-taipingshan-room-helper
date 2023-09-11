@@ -44,6 +44,7 @@ git commit -m "remove idea dictionary"
 * [Selenium wait.until to check ajax request finished is throw error](https://stackoverflow.com/questions/32572313/selenium-wait-until-to-check-ajax-request-finished-is-throw-error)
 * [Getting the return value of Javascript code in Selenium](https://stackoverflow.com/questions/5585343/getting-the-return-value-of-javascript-code-in-selenium)
 * [Action Chains in Selenium Python](https://www.geeksforgeeks.org/action-chains-in-selenium-python/) 
+* [Pandas merge](http://violin-tao.blogspot.com/2017/06/pandas-2-concat-merge.html)
 
 [comment]: <> (### Note)
 
