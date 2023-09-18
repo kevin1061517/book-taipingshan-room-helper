@@ -1,6 +1,30 @@
 ## book-taipingshan-room-helper
 
-### Remove the mistakenly uploaded idea dictionary from the GitHub repository
+### Git Notes
+#### Check who writes the shit codes
+If there are too many lines of code, we can type `q` to exit a terminal listing mode 
+```
+// 1
+git blame main.py
+// 2
+git log -p main.py
+```
+
+#### Reset to undo local changes to the state of a Git repo.
+```
+git log --oneline
+git reflog
+
+git reset e123456 --hard
+// undo to the previous state of crucial operation
+git reset ORIG-HEAD --hard 
+
+// undo to the previous state of commit ID e123456 because of ^
+git reset e123456^
+git reset master^
+```
+
+#### Remove the mistakenly uploaded idea dictionary from the GitHub repository
 ```
 // 1. List the files in the cache 
 git ls-files
@@ -12,10 +36,6 @@ git commit -m "remove idea dictionary"
 // 3. Manually delete the idea dictionary on Github 
 ```
 
-### Requirement
-1. pip3 install selenium
-2. pip3 install webdriver-manager
-3. pip3 install beautifulsoup4
 
 ### Anaconda command
 1. conda create -n {env-name} python={version}

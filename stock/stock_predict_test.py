@@ -5,6 +5,9 @@ import json
 import datetime
 import time
 import pandas as pd
+from datetime import datetime, date
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
@@ -64,6 +67,22 @@ def get_performance_analysis(stock_num):
     return df.head()
 
 
+# 下載一日大盤走勢
+def get_stock_daily(year, month, day):
+    stock_date = str(date(year, month, day).strftime("%Y%m%d"))
+    df = pd.DataFrame()
+    url = "https://www.twse.com.tw/exchangeReport/MI_5MINS_INDEX?response=json&date=" + stock_date
+    res = requests.get(url)
+    stock_json = res.json()
+    stock_df = pd.DataFrame.from_dict(stock_json['data'])
+    df = pd.concat([df, stock_df], ignore_index=True)
+    df.columns = stock_json['fields']
+    return df
+
+
 if __name__ == '__main__':
+    daily_stock = get_stock_daily(2023, 9, 11)
+    print(daily_stock.head())
+
     # standard_analyze('2303')
-    get_performance_analysis('2303')
+    # get_performance_analysis('2303')
